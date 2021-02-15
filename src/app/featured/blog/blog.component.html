@@ -1,0 +1,722 @@
+<div
+  class="inner-comn-area overlay"
+  style="background-image: url(./assets/images/diwan-breadcrumbs.jpg)"
+>
+  <div class="container">
+    <div class="breadcrumbs-area">
+      <div class="verticalyMiddle">
+        <div class="default-heading">
+          <h2>Our Blog</h2>
+        </div>
+        <div class="breadcrumbs">
+          <a href="#!">Home</a><span> Our Blog</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="blog-page-area ptb-100 our-blog-page">
+  <div class="container">
+    <div class="row">
+      <div class="blog-section pd_auto">
+        <div class="container">
+          <div class="features-content-area section-title">
+            <h3
+              class="wow fadeInRight"
+              style="visibility: visible; animation-name: fadeInRight"
+            >
+              Read Our Latest Blogs
+            </h3>
+          </div>
+          <div class="row">
+            <div class="seventy">
+              <div class="row">
+                <ng-container *ngFor="let bloglist of blogListData">
+                  <div class="col-lg-6 col-md-12">
+                    <div class="blog-item our-blog-item">
+                      <div class="blog-image">
+                        <a href="javascript:void(0)">
+                          <img
+                            class="img-fluid"
+                            src="./assets/images/our-blog-1.jpg"
+                            alt="image"
+                        /></a>
+                      </div>
+                      <div class="single-blog-item">
+                        <ul class="date">
+                          <li>02</li>
+                          <li>January</li>
+                        </ul>
+                        <ul class="blog-list">
+                          <li>
+                            <a href="javascript:void(0)"
+                              ><i class="fa fa-user-alt"></i> By admin</a
+                            >
+                          </li>
+                          <li><i class="far fa-comments"></i> 3 Comments</li>
+                        </ul>
+                        <div class="blog-content">
+                          <a href="javascript:void(0)">
+                            <h3>
+                              {{ bloglist.title.rendered }}
+                            </h3>
+                          </a>
+                          <p
+                            [innerHtml]="
+                              bloglist.content.rendered | slice: 0:150
+                            "
+                          ></p>
+                        </div>
+                        <div class="blog-btn">
+                          <a
+                            class="blog-btn-one"
+                            routerLink="{{ bloglist.slug }}"
+                            >Read More ⟶</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+                <!-- <div class="col-lg-6 col-md-12">
+                  <div class="blog-item our-blog-item">
+                    <div class="blog-image">
+                      <a href="javascript:void(0)">
+                        <img
+                          class="img-fluid"
+                          src="./assets/images/our-blog-2.jpeg"
+                          alt="image"
+                      /></a>
+                    </div>
+                    <div class="single-blog-item">
+                      <ul class="date">
+                        <li>03</li>
+                        <li>January</li>
+                      </ul>
+                      <ul class="blog-list">
+                        <li>
+                          <a href="javascript:void(0)"
+                            ><i class="fa fa-user-alt"></i> By admin</a
+                          >
+                        </li>
+                        <li><i class="far fa-comments"></i> 3 Comments</li>
+                      </ul>
+                      <div class="blog-content">
+                        <a href="javascript:void(0)">
+                          <h3>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit
+                          </h3>
+                        </a>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Cupiditate reprehenderit delectus reiciendis
+                          odio quas? Saepe esse cum voluptate. Tempora veritatis
+                          ducimus adipisci in iusto.
+                        </p>
+                      </div>
+                      <div class="blog-btn">
+                        <a class="blog-btn-one" href="javascript:void(0)"
+                          >Read More ⟶</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12 offset-lg-0 offset-md-3">
+                  <div class="blog-item our-blog-item">
+                    <div class="blog-image">
+                      <a href="javascript:void(0)">
+                        <img
+                          class="img-fluid"
+                          src="./assets/images/our-blog-3.jpg"
+                          alt="image"
+                      /></a>
+                    </div>
+                    <div class="single-blog-item">
+                      <ul class="date">
+                        <li>03</li>
+                        <li>January</li>
+                      </ul>
+                      <ul class="blog-list">
+                        <li>
+                          <a href="javascript:void(0)"
+                            ><i class="fa fa-user-alt"></i> By admin</a
+                          >
+                        </li>
+                        <li><i class="far fa-comments"></i> 3 Comments</li>
+                      </ul>
+                      <div class="blog-content">
+                        <a href="javascript:void(0)">
+                          <h3>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit
+                          </h3>
+                        </a>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Cupiditate reprehenderit delectus reiciendis
+                          odio quas? Saepe esse cum voluptate. Tempora veritatis
+                          ducimus adipisci in iusto.
+                        </p>
+                      </div>
+                      <div class="blog-btn">
+                        <a class="blog-btn-one" href="javascript:void(0)"
+                          >Read More ⟶</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                  <div class="blog-item our-blog-item">
+                    <div class="blog-image">
+                      <a href="javascript:void(0)">
+                        <img
+                          class="img-fluid"
+                          src="./assets/images/our-blog-1.jpg"
+                          alt="image"
+                      /></a>
+                    </div>
+                    <div class="single-blog-item">
+                      <ul class="date">
+                        <li>02</li>
+                        <li>January</li>
+                      </ul>
+                      <ul class="blog-list">
+                        <li>
+                          <a href="javascript:void(0)"
+                            ><i class="fa fa-user-alt"></i> By admin</a
+                          >
+                        </li>
+                        <li><i class="far fa-comments"></i> 3 Comments</li>
+                      </ul>
+                      <div class="blog-content">
+                        <a href="javascript:void(0)">
+                          <h3>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit
+                          </h3>
+                        </a>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Cupiditate reprehenderit delectus reiciendis
+                          odio quas? Saepe esse cum voluptate. Tempora veritatis
+                          ducimus adipisci in iusto.
+                        </p>
+                      </div>
+                      <div class="blog-btn">
+                        <a class="blog-btn-one" href="javascript:void(0)"
+                          >Read More ⟶</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                  <div class="blog-item our-blog-item">
+                    <div class="blog-image">
+                      <a href="javascript:void(0)">
+                        <img
+                          class="img-fluid"
+                          src="./assets/images/our-blog-1.jpg"
+                          alt="image"
+                      /></a>
+                    </div>
+                    <div class="single-blog-item">
+                      <ul class="date">
+                        <li>02</li>
+                        <li>January</li>
+                      </ul>
+                      <ul class="blog-list">
+                        <li>
+                          <a href="javascript:void(0)"
+                            ><i class="fa fa-user-alt"></i> By admin</a
+                          >
+                        </li>
+                        <li><i class="far fa-comments"></i> 3 Comments</li>
+                      </ul>
+                      <div class="blog-content">
+                        <a href="javascript:void(0)">
+                          <h3>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit
+                          </h3>
+                        </a>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Cupiditate reprehenderit delectus reiciendis
+                          odio quas? Saepe esse cum voluptate. Tempora veritatis
+                          ducimus adipisci in iusto.
+                        </p>
+                      </div>
+                      <div class="blog-btn">
+                        <a class="blog-btn-one" href="blog-details.html"
+                          >Read More ⟶</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                  <div class="blog-item our-blog-item">
+                    <div class="blog-image">
+                      <a href="javascript:void(0)">
+                        <img
+                          class="img-fluid"
+                          src="./assets/images/our-blog-1.jpg"
+                          alt="image"
+                      /></a>
+                    </div>
+                    <div class="single-blog-item">
+                      <ul class="date">
+                        <li>02</li>
+                        <li>January</li>
+                      </ul>
+                      <ul class="blog-list">
+                        <li>
+                          <a href="javascript:void(0)"
+                            ><i class="fa fa-user-alt"></i> By admin</a
+                          >
+                        </li>
+                        <li><i class="far fa-comments"></i> 3 Comments</li>
+                      </ul>
+                      <div class="blog-content">
+                        <a href="javascript:void(0)">
+                          <h3>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit
+                          </h3>
+                        </a>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Cupiditate reprehenderit delectus reiciendis
+                          odio quas? Saepe esse cum voluptate. Tempora veritatis
+                          ducimus adipisci in iusto.
+                        </p>
+                      </div>
+                      <div class="blog-btn">
+                        <a class="blog-btn-one" href="javascript:void(0)"
+                          >Read More ⟶</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+                <div class="col-lg-12">
+                  <div class="blog-pagination text-center">
+                    <div class="pagination-area">
+                      <a href="#" class="prev page-numbers">
+                        <i class="fas fa-angle-double-left"></i>
+                      </a>
+                      <a
+                        href="#"
+                        class="page-numbers current"
+                        aria-current="page"
+                        >1</a
+                      >
+                      <a href="#" class="page-numbers"> 2 </a>
+                      <a href="#" class="page-numbers">3</a>
+                      <a href="#" class="page-numbers">4</a>
+                      <a href="#" class="next page-numbers">
+                        <i class="fas fa-angle-double-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thirty team-bg-color">
+              <div class="categories">
+                <h2 class="archive-head">Categories</h2>
+                <ul>
+                  <li>
+                    <a href=""> <span>Business</span><span>(05)</span> </a>
+                  </li>
+                  <li>
+                    <a href=""> <span>Privacy</span><span>(08)</span> </a>
+                  </li>
+                  <li>
+                    <a href=""> <span>Technology</span><span>(15)</span> </a>
+                  </li>
+                  <li>
+                    <a href=""> <span>Tips</span><span>(10)</span> </a>
+                  </li>
+                  <li>
+                    <a href=""> <span>Uncategorized</span><span>(05)</span> </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="recent-blog">
+                <h2 class="archive-head">Recent Blog</h2>
+                <div class="d-flex blog-wrp">
+                  <figure>
+                    <img src="./assets/images/w-1.jpg" alt="image" />
+                  </figure>
+                  <div class="recent-blog-item">
+                    <a href="">
+                      In what year did the use of gradient color begin?
+                    </a>
+                    <p>Saturday, 4 July 2020</p>
+                  </div>
+                </div>
+                <div class="d-flex blog-wrp">
+                  <figure>
+                    <img src="./assets/images/w-1.jpg" alt="image" />
+                  </figure>
+                  <div class="recent-blog-item">
+                    <a href="">
+                      In what year did the use of gradient color begin?
+                    </a>
+                    <p>Saturday, 4 July 2020</p>
+                  </div>
+                </div>
+                <div class="d-flex blog-wrp">
+                  <figure>
+                    <img src="./assets/images/w-1.jpg" alt="image" />
+                  </figure>
+                  <div class="recent-blog-item">
+                    <a href="">
+                      In what year did the use of gradient color begin?
+                    </a>
+                    <p>Saturday, 4 July 2020</p>
+                  </div>
+                </div>
+                <div class="d-flex blog-wrp">
+                  <figure>
+                    <img src="./assets/images/w-1.jpg" alt="image" />
+                  </figure>
+                  <div class="recent-blog-item">
+                    <a href="">
+                      In what year did the use of gradient color begin?
+                    </a>
+                    <p>Saturday, 4 July 2020</p>
+                  </div>
+                </div>
+              </div>
+              <div class="archive-blog">
+                <h2 class="archive-head">Archives</h2>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        2021
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <ul>
+                          <li>
+                            <a href="#">
+                              <span>December</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>November</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>October</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>September</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>August</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>July</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>June</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>May</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>April</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>March</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>February</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>January</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        2020
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <ul>
+                          <li>
+                            <a href="#">
+                              <span>December</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>November</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>October</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>September</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>August</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>July</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>June</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>May</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>April</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>March</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>February</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>January</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        2019
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingThree"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <ul>
+                          <li>
+                            <a href="#">
+                              <span>December</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>November</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>October</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>September</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>August</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>July</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>June</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>May</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>April</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>March</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>February</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <span>January</span>
+                              <span>(0)</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="widget-area">
+                <h2 class="archive-head">Tags</h2>
+                <div class="tagcloud">
+                  <a href="#">IT <span class="tag-link-count"> (3)</span></a>
+                  <a href="#"
+                    >Crimso <span class="tag-link-count"> (3)</span></a
+                  >
+                  <a href="#">Games <span class="tag-link-count"> (2)</span></a>
+                  <a href="#"
+                    >Travel <span class="tag-link-count"> (1)</span></a
+                  >
+                  <a href="#">Tips <span class="tag-link-count"> (2)</span></a>
+                  <a href="#">Smart <span class="tag-link-count"> (1)</span></a>
+                  <a href="#"
+                    >Marketing <span class="tag-link-count"> (1)</span></a
+                  >
+                  <a href="#"
+                    >Fashion <span class="tag-link-count"> (2)</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

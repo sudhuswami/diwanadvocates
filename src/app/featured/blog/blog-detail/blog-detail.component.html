@@ -1,0 +1,447 @@
+<div
+  class="inner-comn-area overlay"
+  style="background-image: url(./assets/images/diwan-breadcrumbs.jpg)"
+>
+  <div class="container">
+    <div class="breadcrumbs-area" *ngIf="blogDetailData">
+      <div class="verticalyMiddle">
+        <div class="default-heading">
+          <h2>{{ blogDetailData.title.rendered }}</h2>
+        </div>
+        <div class="breadcrumbs">
+          <a routerLink="/">Home</a><a href="/blog">Our Blog</a
+          ><span> {{ blogDetailData.title.rendered }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section
+  class="About-page-section pd_auto features-content-area wow bounceInRight"
+>
+  <div class="container">
+    <div class="row">
+      <div class="seventy">
+        <div class="about-us-first-section">
+          <div class="">
+            <figure>
+              <img
+                class="img-fluid"
+                src="./assets/images/our-blog-1.jpg"
+                alt=""
+              />
+            </figure>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="article-tags">
+                <span><i class="fas fa-bookmark"></i></span>
+                <a href="#">Fashion,</a>
+                <a href="#">Games,</a>
+                <a href="#">Travel</a>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="article-share">
+                <div class="social-icons">
+                  <a href="#" target="_blank" class="slider-nav-item">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" target="_blank" class="slider-nav-item">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a href="#" target="_blank" class="slider-nav-item">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#" target="_blank" class="slider-nav-item">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p
+            *ngIf="blogDetailData"
+            [innerHtml]="blogDetailData.content.rendered"
+          ></p>
+          <!-- <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae at
+            similique exercitationem cum dolore beatae eligendi eum blanditiis,
+            rerum vel, eveniet ipsa explicabo nam laboriosam aliquid ut nihil
+            culpa ex! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Ad ut earum voluptate illo, beatae fugiat obcaecati perspiciatis.
+            Amet voluptatum non laborum ut atque ex dolorem doloribus ducimus
+            eum saepe! Deserunt.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae at
+            similique exercitationem cum dolore beatae eligendi eum blanditiis,
+            rerum vel, eveniet ipsa explicabo nam laboriosam aliquid ut nihil
+            culpa ex! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Ad ut earum voluptate illo, beatae fugiat obcaecati perspiciatis.
+            Amet voluptatum non laborum ut atque ex dolorem doloribus ducimus
+            eum saepe! Deserunt.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae at
+            similique exercitationem cum dolore beatae eligendi eum blanditiis,
+            rerum vel, eveniet ipsa explicabo nam laboriosam aliquid ut nihil
+            culpa ex! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Ad ut earum voluptate illo, beatae fugiat obcaecati perspiciatis.
+            Amet voluptatum non laborum ut atque ex dolorem doloribus ducimus
+            eum saepe! Deserunt.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae at
+            similique exercitationem cum dolore beatae eligendi eum blanditiis,
+            rerum vel, eveniet ipsa explicabo nam laboriosam aliquid ut nihil
+            culpa ex! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Ad ut earum voluptate illo, beatae fugiat obcaecati perspiciatis.
+            Amet voluptatum non laborum ut atque ex dolorem doloribus ducimus
+            eum saepe! Deserunt.
+          </p> -->
+        </div>
+      </div>
+      <div class="thirty team-bg-color">
+        <div class="recent-blog recent-detail-blog">
+          <h2 class="archive-head">Recent Blog</h2>
+          <div class="d-flex blog-wrp">
+            <figure>
+              <img src="./assets/images/w-1.jpg" alt="image" />
+            </figure>
+            <div class="recent-blog-item">
+              <a href=""> In what year did the use of gradient color begin? </a>
+              <p>Saturday, 4 July 2020</p>
+            </div>
+          </div>
+          <div class="d-flex blog-wrp">
+            <figure>
+              <img src="./assets/images/w-1.jpg" alt="image" />
+            </figure>
+            <div class="recent-blog-item">
+              <a href=""> In what year did the use of gradient color begin? </a>
+              <p>Saturday, 4 July 2020</p>
+            </div>
+          </div>
+          <div class="d-flex blog-wrp">
+            <figure>
+              <img src="./assets/images/w-1.jpg" alt="image" />
+            </figure>
+            <div class="recent-blog-item">
+              <a href=""> In what year did the use of gradient color begin? </a>
+              <p>Saturday, 4 July 2020</p>
+            </div>
+          </div>
+          <div class="d-flex blog-wrp">
+            <figure>
+              <img src="./assets/images/w-1.jpg" alt="image" />
+            </figure>
+            <div class="recent-blog-item">
+              <a href=""> In what year did the use of gradient color begin? </a>
+              <p>Saturday, 4 July 2020</p>
+            </div>
+          </div>
+        </div>
+        <div class="archive-blog">
+          <h2 class="archive-head">Archives</h2>
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  2021
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <div>December</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>November</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>October</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>September</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>August</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>July</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>June</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>May</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>April</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>March</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>February</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>January</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  2020
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <div>December</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>November</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>October</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>September</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>August</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>July</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>June</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>May</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>April</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>March</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>February</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>January</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  2019
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <div>December</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>November</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>October</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>September</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>August</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>July</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>June</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>May</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>April</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>March</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>February</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div>January</div>
+                        <div>(0)</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

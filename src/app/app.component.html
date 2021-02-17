@@ -1,3 +1,31 @@
+<div
+  id="consent-popup"
+  class="consent-popup"
+  [ngClass]="{
+    active: access_site == '1',
+    '': access_site == '0'
+  }"
+>
+  <div class="consent-check">
+    <div class="consent-content">
+      <p>
+        Disclaimer : As per the rules of the Bar Council of India, we are not
+        permitted to solicit work and advertise. By visiting the website, the
+        user acknowledges that the information provided on this website is
+        solely available for informational purposes only sought to be
+        voluntarily gained by him/her and is neither soliciting nor
+        advertisement. Further, the information provided on this website is
+        accessed by the user’s own volition, and any transmission, receipt or
+        use of this information available on this website does not create any
+        liability or any relationship with us.
+      </p>
+      <button (click)="rejectConsent()" class="cookie-reject-btn">
+        DISAGREE
+      </button>
+      <button (click)="acceptConsent()" class="cookie-accept-btn">AGREE</button>
+    </div>
+  </div>
+</div>
 <router-outlet></router-outlet>
 <!-- <app-scroll-to-top></app-scroll-to-top> -->
 <app-spinner></app-spinner>

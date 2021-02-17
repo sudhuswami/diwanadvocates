@@ -12,9 +12,11 @@ import { ContactUsComponent } from './featured/contact-us/contact-us.component';
 import { JoinUsComponent } from './featured/join-us/join-us.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import * as $ from "jquery";
 import { ErrorInterceptor } from './http-intercepters/interceptor';
 import { SpinnerComponent } from './core/spinner/spinner.component';
+import * as $ from "jquery";
+import { RejectConsentComponent } from './featured/reject-consent/reject-consent.component';
+import { CookieService } from 'ngx-cookie-service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,15 +29,17 @@ import { SpinnerComponent } from './core/spinner/spinner.component';
     ContactUsComponent,
     JoinUsComponent,
     SpinnerComponent,
+    RejectConsentComponent,
 
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule.withServerTransition({ appId: 'diwanadvocates' }),
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+
   ],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

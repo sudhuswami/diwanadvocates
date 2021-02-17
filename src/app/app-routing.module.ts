@@ -5,8 +5,10 @@ import { PageNotFoundComponent } from './common/page-not-found/page-not-found.co
 import { ContactUsComponent } from './featured/contact-us/contact-us.component';
 import { HomeComponent } from './featured/home/home.component';
 import { JoinUsComponent } from './featured/join-us/join-us.component';
+import { RejectConsentComponent } from './featured/reject-consent/reject-consent.component';
 
 const routes: Routes = [
+  { path: "rejectconsent", component: RejectConsentComponent },
   { path: "404", component: PageNotFoundComponent },
   {
     path: "", component: CommonComponent,

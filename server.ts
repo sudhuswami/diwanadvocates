@@ -1,5 +1,4 @@
 import 'zone.js/dist/zone-node';
-
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
 import { join } from 'path';
@@ -10,9 +9,16 @@ import { existsSync } from 'fs';
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
+
   const server = express();
-  const distFolder = join(process.cwd(), 'dist/diwanadvocates/browser');
+  const distFolder = join(process.cwd(), 'dist/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
+  const domino = require('domino');
+  const win = domino.createWindow(indexHtml);
+  // mock
+  global['window'] = win;
+  global['document'] = win.document;
+  global['navigator'] = win.navigator;
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
   server.engine('html', ngExpressEngine({
@@ -38,7 +44,7 @@ export function app(): express.Express {
 }
 
 function run(): void {
-  const port = process.env.PORT || 8080;
+  const port = process.env.PORT || 3000;
 
   // Start up the Node server
   const server = app();

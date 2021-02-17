@@ -14,9 +14,8 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ErrorInterceptor } from './http-intercepters/interceptor';
 import { SpinnerComponent } from './core/spinner/spinner.component';
-import * as $ from "jquery";
-import { RejectConsentComponent } from './featured/reject-consent/reject-consent.component';
-import { CookieService } from 'ngx-cookie-service';
+import { PLATFORM_ID, APP_ID, Inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,17 +28,23 @@ import { CookieService } from 'ngx-cookie-service';
     ContactUsComponent,
     JoinUsComponent,
     SpinnerComponent,
-    RejectConsentComponent,
 
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'diwanadvocates' }),
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-
   ],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }, CookieService],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: object,
+    @Inject(APP_ID) private appId: string) {
+    const platform = isPlatformBrowser(platformId) ?
+      'in the browser' : 'on the server';
+    console.log(`Running ${platform} with appId=${appId}`);
+  }
+}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-
+declare var $: any;
 @Component({
   selector: 'app-company-overview',
   templateUrl: './company-overview.component.html',

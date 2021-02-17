@@ -2,8 +2,8 @@
 {
   "extends": "./tsconfig.app.json",
   "compilerOptions": {
-    "outDir": "./out-tsc/server",
-       "module": "commonjs",
+    "outDir": "./out-tsc/app-server",
+    "module": "commonjs",
     "types": [
       "node"
     ]

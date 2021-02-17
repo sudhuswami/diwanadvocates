@@ -25,6 +25,7 @@ export class BlogDetailComponent implements OnInit {
   }
   getBlogDetailData() {
     this.apiService.getBlogDetailData().subscribe((res) => {
+
       this.blogDetailData = <any>res[0];
 
     },
